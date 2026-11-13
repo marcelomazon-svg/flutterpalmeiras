@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sociedade Palmeiras',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 1, 97, 41)),
+        //colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 1, 97, 41)),
+         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Pagina Palmeiras'),
     );
   }
 }
@@ -84,7 +86,12 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
+        leading: Text("VAMO PRA CIMA PORCOO!!!"),
         title: Text(widget.title),
+        actions: <Widget>[
+          Icon(Icons.add)
+          ,
+        ],
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -105,11 +112,12 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: .center,
           children: [
-            const Text('You have pushed the button this many times:'),
+            const Text('Gols do PALMEIRASSSS!!!'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text('Vamos palmeiras!!'),
           ],
         ),
       ),
